@@ -6,3 +6,15 @@ h1 {
     color: steelblue;
     text-decoration: underline;
 }
+
+h2 {
+    font-size: 220%;
+}
+
+p {
+    font-size: 110%;
+}
+
+body {
+    background-color: gainsboro;
+}
