@@ -1,0 +1,4 @@
+<p *ngFor="let item of shoppingList">
+  <!-- There is a ) here to create an ordered list -->
+  {{ item.id }}) {{ item.name }} <input [(ngModel)]="item.name" placeholder="name">
+</p>
