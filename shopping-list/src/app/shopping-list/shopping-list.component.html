@@ -5,11 +5,4 @@
   {{ item.id }}) {{ item.name }}
 </p>
 
-<div *ngIf="selectedItem">
-  <h2>{{selectedItem.name}}</h2>
-  <input [(ngModel)]="selectedItem.name" placeholder="name">
-</div>
-
-<div *ngIf="!selectedItem">
-  <p>Please select an item to modify it.</p>
-</div>
+<app-shopping-list-detail [item]="selectedItem"></app-shopping-list-detail>

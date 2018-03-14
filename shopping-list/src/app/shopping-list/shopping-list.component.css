@@ -4,4 +4,5 @@ p {
 
 .selected {
     background-color: forestgreen;
+    border-radius: 15px;
 }

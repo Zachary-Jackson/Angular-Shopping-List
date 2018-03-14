@@ -4,3 +4,7 @@ h1 {
     color: forestgreen;
     font-size: 250%;
 }
+
+body {
+    background-color: lightgray;
+}
