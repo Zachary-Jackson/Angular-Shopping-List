@@ -10,11 +10,21 @@ import { CART } from '../mock-cart';
 })
 export class ShoppingListComponent implements OnInit {
 
+  // This is currently a mocked data set without using a service
   shoppingList = CART;
+
+  selectedItem: Cart;
+
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  // onSelect takes the value "item" that is given to it from shopping-list.component.html
+  // and sets it as the selectedItem
+  onSelect(item: Cart): void {
+    this.selectedItem = item;
   }
 
 }

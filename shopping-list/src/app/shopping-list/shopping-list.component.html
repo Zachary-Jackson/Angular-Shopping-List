@@ -1,4 +1,15 @@
-<p *ngFor="let item of shoppingList">
+<p *ngFor="let item of shoppingList"
+  [class.selected]="item === selectedItem"
+  (click)="onSelect(item)">
   <!-- There is a ) here to create an ordered list -->
-  {{ item.id }}) {{ item.name }} <input [(ngModel)]="item.name" placeholder="name">
+  {{ item.id }}) {{ item.name }}
 </p>
+
+<div *ngIf="selectedItem">
+  <h2>{{selectedItem.name}}</h2>
+  <input [(ngModel)]="selectedItem.name" placeholder="name">
+</div>
+
+<div *ngIf="!selectedItem">
+  <p>Please select an item to modify it.</p>
+</div>
