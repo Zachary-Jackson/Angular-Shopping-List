@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListDetailComponent } from './shopping-list-detail/shopping-list-detail.component';
+import { CartService } from './cart.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { ShoppingListDetailComponent } from './shopping-list-detail/shopping-lis
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
