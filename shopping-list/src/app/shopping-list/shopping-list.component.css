@@ -6,3 +6,24 @@ p {
     background-color: forestgreen;
     border-radius: 15px;
 }
+
+.primary-content {
+    width: 75%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: auto;
+    max-width: 960px;
+}
+
+.fruits,
+.other {
+    width: 46.5%;
+}
+
+.fruits {
+    float: left;
+}
+
+.other {
+    float: right;
+}
