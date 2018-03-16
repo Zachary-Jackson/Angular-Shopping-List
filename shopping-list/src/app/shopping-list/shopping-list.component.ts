@@ -23,7 +23,6 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit() {
     this.getCart();
-    this.getGroups();
   }
 
   // onSelect takes the value "item" that is given to it from shopping-list.component.html
@@ -32,23 +31,15 @@ export class ShoppingListComponent implements OnInit {
     this.selectedItem = item;
   }
 
+  // getCart grabs all of the grocery items from cartService and puts them in the
+  // proper group variabels for the template to use
   getCart(): void {
     this.cartService.getCart()
       .subscribe(cart => this.shoppingList = cart)
-  }
-
-  // getGroups sorts shoppingList by food category and fills out the food groups
-  getGroups(): void {
-    this.fruit = []
-    this.other = []
-    for (let item of this.shoppingList) {
-      if (item.group ==='fruit') {
-        this.fruit.push(item)
-      }
-      if (item.group ==='other') {
-        this.other.push(item)
-      }
-    }
+    this.cartService.getFruit()
+      .subscribe(fruit => this.fruit = fruit)
+      this.cartService.getOther()
+      .subscribe(other => this.other = other)
   }
 
 }
