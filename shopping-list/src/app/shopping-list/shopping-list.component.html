@@ -1,28 +1,8 @@
-
-<!-- The primary-content class allows for the seperation of content into two lists
-on the webpage -->
-<div class="primary-content">
-
-  <div class="fruits">
-    <h2>Fruits</h2>
-    <p  *ngFor="let item of fruit"
-      [class.selected]="item === selectedItem"
-      (click)="onSelect(item)">
-      <!-- There is a ) here to create an ordered list -->
-      {{ item.id }}) {{ item.name }}
-    </p>
-  </div>
-
-  <div class="other">
-    <h2>Other</h2>
-    <p *ngFor="let item of other"
-      [class.selected]="item === selectedItem"
-      (click)="onSelect(item)">
-      <!-- There is a ) here to create an ordered list -->
-      {{ item.id }}) {{ item.name }}
-    </p>
-  </div>
-
-</div>
+<p *ngFor="let item of shoppingList"
+  [class.selected]="item === selectedItem"
+  (click)="onSelect(item)">
+  <!-- There is a ) here to create an ordered list -->
+  {{ item.id }}) {{ item.name }}
+</p>
 
 <app-shopping-list-detail [item]="selectedItem"></app-shopping-list-detail>
