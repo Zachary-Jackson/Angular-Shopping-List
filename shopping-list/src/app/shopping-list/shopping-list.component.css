@@ -13,6 +13,7 @@ p {
     padding-right: 50px;
     margin: auto;
     max-width: 960px;
+    overflow: auto;
 }
 
 .fruits,

@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { CartService } from './cart.service';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListDetailComponent } from './shopping-list-detail/shopping-list-detail.component';
-import { CartService } from './cart.service';
 
 
 @NgModule({

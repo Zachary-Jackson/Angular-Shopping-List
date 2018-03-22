@@ -32,13 +32,13 @@ export class ShoppingListComponent implements OnInit {
   }
 
   // getCart grabs all of the grocery items from cartService and puts them in the
-  // proper group variabels for the template to use
+  // proper group variables for the template to use
   getCart(): void {
     this.cartService.getCart()
       .subscribe(cart => this.shoppingList = cart)
-    this.cartService.getFruit()
+    this.cartService.getGroup('fruit')
       .subscribe(fruit => this.fruit = fruit)
-      this.cartService.getOther()
+      this.cartService.getGroup('other')
       .subscribe(other => this.other = other)
   }
 

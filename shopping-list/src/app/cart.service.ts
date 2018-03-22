@@ -10,28 +10,20 @@ export class CartService {
 
   constructor() { }
 
+  // getCart() takes the mock data from mock-cart and returns it
   getCart(): Observable<Cart[]> {
     return of(CART);
   }
 
-  getFruit(): Observable<Cart[]> {
-    let fruitArray: Cart[] = [];
+  // getGroup() takes a string and filters the data from mock-cart by group
+  getGroup(group: string): Observable<Cart[]> {
+    let groupArray: Cart[] = [];
     for (let item of CART) {
-      if (item.group === 'fruit') {
-        fruitArray.push(item)
+      if (item.group === group) {
+        groupArray.push(item)
       }
     }
-    return of(fruitArray)
-  }
-
-  getOther(): Observable<Cart[]> {
-    let otherArray: Cart[] = [];
-    for (let item of CART) {
-      if (item.group === 'other') {
-        otherArray.push(item)
-      }
-    }
-    return of(otherArray)
+    return of(groupArray)
   }
 
 }
